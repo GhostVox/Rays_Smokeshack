@@ -127,6 +127,10 @@
         cursor: pointer;
         transition: background 0.3s ease-in-out;
     }
+    button:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
     footer {
         bottom: 0;
         left: 0;
@@ -141,6 +145,8 @@
     footer a {
         color: black;
         text-decoration: none;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
     }
     footer a:hover {
         color: darkgray;
@@ -282,6 +288,10 @@
         cursor: pointer;
         transition: background 0.3s ease-in-out;
     }
+    button:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
     footer {
         bottom: 0;
         left: 0;
@@ -296,6 +306,8 @@
     footer a {
         color: black;
         text-decoration: none;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
     }
     footer img {
         width: 30px;
@@ -443,6 +455,10 @@
         cursor: pointer;
         transition: background 0.3s ease-in-out;
     }
+    button:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
     #buttonOne {
         margin-right: 14vw;
     }
@@ -469,6 +485,8 @@
     }
     footer a:hover {
         color: darkgray;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
     }
     footer p {
         margin-bottom: 15px;
