@@ -1,0 +1,476 @@
+@media screen and (max-width: 430px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+    .bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+        opacity: 0.7;
+        z-index: -1; 
+    }
+    #banner {
+        width: 100%;
+        height: 13vh;
+        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+    }
+    #menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+    }
+    #menu:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    #dropdownMenu {
+        display: none; 
+        position: absolute;
+        top: 140px; 
+        right: 10px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 2.5px;
+        overflow: hidden;
+    }
+    #dropdownMenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #dropdownMenu ul li {
+        padding: 10px 20px;
+        border-bottom: 1.5px solid #dddddd;
+    }
+    #dropdownMenu ul li:last-child {
+        border-bottom: none;
+    }
+    #dropdownMenu ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    #dropdownMenu ul li:hover {
+        background: lightgray;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    #profileImage {
+        top: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
+    }
+    #profileImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    p {
+        font-size: 18px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    #mapImage {
+        margin-top: 20px;
+        width: 300px;
+        height: 260px;
+        border-radius: 10px;
+        border: 2px solid black;
+        cursor: pointer;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+    }
+    #mapImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .gallery img {
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    }
+    button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: rgba(213, 44, 44, 0.818);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+    footer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 10px 0;
+        color: black;
+    }
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: darkgray;
+    }
+    footer p {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+    .bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+        opacity: 0.7;
+        z-index: -1; 
+    }
+    #banner {
+        width: 100%;
+        height: 24vh;
+        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+    }
+    #menu {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 70px;
+        height: auto;
+        cursor: pointer;
+    }
+    #menu:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    #dropdownMenu {
+        display: none; 
+        position: absolute;
+        top: 190px; 
+        right: 30px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 2.5px;
+        overflow: hidden;
+    }
+    #dropdownMenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #dropdownMenu ul li {
+        padding: 10px 20px;
+        border-bottom: 1.5px solid #dddddd;
+    }
+    #dropdownMenu ul li:last-child {
+        border-bottom: none;
+    }
+    #dropdownMenu ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    #dropdownMenu ul li:hover {
+        background: lightgray;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    #profileImage {
+        margin-top: 20px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
+    }
+    #profileImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 35px;
+    }
+    p {
+        font-size: 25px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    #mapImage {
+        margin-top: 20px;
+        width: 80vw;
+        height: 40vh;
+        border-radius: 10px;
+        border: 2px solid black;
+        cursor: pointer;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+    }
+    #mapImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .gallery img {
+        border-radius: 10px;
+        width: 40vw;
+        height: 30vh;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    }
+    button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 30vw;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: rgba(213, 44, 44, 0.818);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+    footer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 10px 0;
+        color: black;
+    }
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+    footer img {
+        width: 30px;
+        height: 30px;
+    }
+    footer a:hover {
+        color: darkgray;
+    }
+    footer p {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+    .bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+        opacity: 0.7;
+        z-index: -1; 
+    }
+    #banner {
+        width: 100%;
+        height: 30vh;
+        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+    }
+    #menu {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 90px;
+        height: auto;
+        cursor: pointer;
+    }
+    #menu:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    #dropdownMenu {
+        display: none; 
+        position: absolute;
+        top: 260px; 
+        right: 50px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 2.5px;
+        overflow: hidden;
+    }
+    #dropdownMenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #dropdownMenu ul li {
+        padding: 10px 20px;
+        border-bottom: 1.5px solid #dddddd;
+    }
+    #dropdownMenu ul li:last-child {
+        border-bottom: none;
+    }
+    #dropdownMenu ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    #dropdownMenu ul li:hover {
+        background: lightgray;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    #profileImage {
+        margin-top: 20px;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
+    }
+    #profileImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 55px;
+    }
+    p {
+        font-size: 35px;
+        margin-top: 5px;
+        text-align: center;
+        width: 80vw;
+    }
+    #mapImage {
+        margin-left: 24%;
+        margin-top: 20px;
+        width: 600px;
+        height: 450px;
+        border-radius: 10px;
+        border: 2px solid black;
+        cursor: pointer;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+    }
+    #mapImage:hover {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+    }
+    .gallery img {
+        border-radius: 10px;
+        width: 30vw;
+        height: 40vh;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    }
+    button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 20vw;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: rgba(213, 44, 44, 0.818);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+    #buttonOne {
+        margin-right: 14vw;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 10px 0;
+        color: black;
+    }
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+    footer img {
+        width: 40px;
+        height: 40px;
+    }
+    footer a:hover {
+        color: darkgray;
+    }
+    footer p {
+        margin-bottom: 15px;
+        font-size: 30px;
+        margin-left: 10.5vw;
+    }
+}
