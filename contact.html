@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rays Smokeshack</title>
+    <link rel="stylesheet" href="src/contact.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <header>
+      <img src="images/Banner.jpg" alt="banner" id="banner">
+      <img src="images/menuWhite.svg" alt="menu icon" tabindex="1" id="menu" onclick="toggleMenu()"> 
+      <nav id="dropdownMenu">
+        <ul>
+            <li><a href="index.html" tabindex="2">Home</a></li>
+            <li><a href="contact.html" tabindex="3">Contact</a></li>
+            <li><a href="menu.html" tabindex="4">Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Reach us using the information below:</p>
+            <div class="contact-info">
+                <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> 
+                    <a href="https://www.google.com/maps?q=34.154655, -84.819172" target="_blank" tabindex="5">
+                        924 West Ave, Cartersville, GA 30120
+                    </a>
+                </p>
+                
+                <p><strong><i class="fas fa-phone"></i> Call Us:</strong> 
+                    <a href="tel:+4705220451" tabindex="6"> (470) 522-0451 </a>
+                </p>
+                
+                <p><strong><i class="fas fa-envelope"></i> Email:</strong> 
+                    <a href="mailto:rjdozer316@gmail.com" tabindex="7"> rjdozer316@gmail.com </a>
+                </p>
+                <a href="https://www.facebook.com/profile.php?id=61571556299024" tabindex="8" target="_blank"><img src="images/facebook.svg" alt="Facebook" id="facebookIcon"></a>
+            </div>
+        </section>
+        <section>
+            <a href="menu.html" tabindex="9"><button id="buttonOne">Menu</button></a>
+            <a href="index.html" tabindex="10"><button>Home</button></a>
+        </section>
+        <footer>
+            <p>&copy; 2024 Rays Smokeshack. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
