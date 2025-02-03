@@ -424,8 +424,9 @@
         width: 80vw;
     }
     #mapImage {
-        margin-left: 28.5%;
-        margin-top: 10px;
+        display: block;
+        justify-content: center;
+        margin-top: 5px;
         width: 500px;
         height: 300px;
         border-radius: 10px;
