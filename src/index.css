@@ -92,6 +92,13 @@
         margin-top: 5px;
         text-align: center;
     }
+    .image-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
     #mapImage {
         object-fit: cover;
         margin-top: 20px;
@@ -255,20 +262,26 @@
         margin-top: 5px;
         text-align: center;
     }
-    .image-link{
+    .image-link {
         display: flex;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: fit-content; 
+        margin: 0 auto;
     }
-    #mapImage {  
+    #mapImage {
+        margin-top: 20px;
+        width: 50vw;
+        height: 20vh;
         border-radius: 10px;
         border: 2px solid black;
         cursor: pointer;
         box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
     #mapImage:hover {
         opacity: 0.5;
         transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
     }
     .gallery {
         display: grid;
@@ -423,6 +436,13 @@
         margin-top: 5px;
         text-align: center;
         width: 80vw;
+    }
+    .image-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content; 
+        margin: 0 auto; 
     }
     #mapImage {
         display: flex;
