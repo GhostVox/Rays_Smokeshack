@@ -424,10 +424,10 @@
         width: 80vw;
     }
     #mapImage {
-        margin-left: 24%;
-        margin-top: 20px;
-        width: 600px;
-        height: 450px;
+        margin-left: 28.5%;
+        margin-top: 10px;
+        width: 500px;
+        height: 300px;
         border-radius: 10px;
         border: 2px solid black;
         cursor: pointer;
