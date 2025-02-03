@@ -70,6 +70,7 @@
         
     }
     #dinnerMenu {
+        object-fit: cover;
         margin-top: 20px;
         width: 70vw;
         height: auto;
