@@ -1,525 +1,601 @@
 @media screen and (max-width: 430px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  #banner {
+    width: 100vw;
+    height: 13vh;
+    border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+  }
+  #menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+  #menu:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  #dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 2.5px;
+    overflow: hidden;
+  }
+  #dropdownMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #dropdownMenu ul li {
+    padding: 10px 20px;
+    border-bottom: 1.5px solid #dddddd;
+  }
+  #dropdownMenu ul li:last-child {
+    border-bottom: none;
+  }
+  #dropdownMenu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  #dropdownMenu ul li:hover {
+    background: lightgray;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #profileImage {
+    object-fit: cover;
+    margin-top: 20px;
+    width: 220px;
+    height: 150px;
+    border-radius: 20%;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
+  }
+  #profileImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #mapImage {
+    object-fit: cover;
+    margin-top: 20px;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+  }
+  #mapImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Gallery css */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  #gallery-image {
+    object-fit: cover;
+    position: center;
+    border-radius: 10px;
+    width: 40vw;
+    height: 30vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    opacity: 1;
+  }
+  .imgControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    align-items: center;
+
+    height: 40px;
+    img {
+      width: 20px;
+      height: 20px;
     }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    #banner {
-        width: 100vw;
-        height: 13vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
-    }
-    #menu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 40px;
-        height: auto;
-        cursor: pointer;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    #dropdownMenu {
-        display: none; 
-        position: absolute;
-        top: 130px; 
-        right: 10px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        
-    }
-    #profileImage {
-        object-fit: cover;
-        margin-top: 20px;
-        width: 220px;
-        height: 150px;
-        border-radius: 20%;
-        cursor: pointer;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
-    }
-    #profileImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    h2 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-    }
-    p {
-        font-size: 18px;
-        margin-top: 5px;
-        text-align: center;
-    }
-    .image-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        margin: 0 auto;
-    }
-    #mapImage {
-        object-fit: cover;
-        margin-top: 20px;
-        width: 300px;
-        height: 260px;
-        border-radius: 10px;
-        border: 2px solid black;
-        cursor: pointer;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
-    }
-    #mapImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
-    }
-    .gallery img {
-        object-fit: cover;
-        border-radius: 10px;
-        width: 170px;
-        height: 170px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    }
-    button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 54px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 10px 0;
-        color: black;
-    }
-    footer a {
-        color: black;
-        text-decoration: none;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer a:hover {
-        color: darkgray;
-    }
+  }
+  /* End of Gallery css */
+
+  button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(213, 44, 44, 0.818);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 0;
+    color: black;
+  }
+  footer a {
+    color: black;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer a:hover {
+    color: darkgray;
+  }
 }
 
 @media screen and (min-width: 431px) and (max-width: 768px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-    }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    #banner {
-        width: 100%;
-        height: 24vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
-    }
-    #menu {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        width: 70px;
-        height: auto;
-        cursor: pointer;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    nav {
-        width: 20%;
-        text-align: center;
-    }
-    #dropdownMenu {
-        display: none; 
-        position: absolute;
-        top: 190px; 
-        right: 30px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        
-    }
-    #profileImage {
-        object-fit: cover;
-        margin-top: 20px;
-        width: 350px;
-        height: 250px;
-        border-radius: 20%;
-        cursor: pointer;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
-    }
-    #profileImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    h2 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        font-size: 35px;
-    }
-    p {
-        font-size: 25px;
-        margin-top: 5px;
-        text-align: center;
-    }
-    .image-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content; 
-        margin: 0 auto;
-    }
-    #mapImage {
-        margin-top: 20px;
-        width: 50vw;
-        height: 20vh;
-        border-radius: 10px;
-        border: 2px solid black;
-        cursor: pointer;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
-    }
-    #mapImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-    .gallery img {
-        object-fit: cover;
-        border-radius: 10px;
-        width: 40vw;
-        height: 30vh;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    }
-    button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 30vw;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 70px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 10px 0;
-        color: black;
-    }
-    footer a {
-        color: black;
-        text-decoration: none;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer img {
-        width: 30px;
-        height: 30px;
-    }
-    footer a:hover {
-        color: darkgray;
-    }
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  #banner {
+    width: 100%;
+    height: 24vh;
+    border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+  }
+  #menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+  }
+  #menu:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav {
+    width: 20%;
+    text-align: center;
+  }
+  #dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 190px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 2.5px;
+    overflow: hidden;
+  }
+  #dropdownMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #dropdownMenu ul li {
+    padding: 10px 20px;
+    border-bottom: 1.5px solid #dddddd;
+  }
+  #dropdownMenu ul li:last-child {
+    border-bottom: none;
+  }
+  #dropdownMenu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  #dropdownMenu ul li:hover {
+    background: lightgray;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #profileImage {
+    object-fit: cover;
+    margin-top: 20px;
+    width: 350px;
+    height: 250px;
+    border-radius: 20%;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
+  }
+  #profileImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+  }
+  p {
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #mapImage {
+    margin-top: 20px;
+    width: 50vw;
+    height: 20vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+  }
+  #mapImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .gallerySection {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #gallery {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #gallery-image {
+    object-fit: cover;
+    position: center;
+    border-radius: 10px;
+
+    width: 40vw;
+    height: 30vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    opacity: 1;
+  }
+  .imgControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    align-items: center;
+
+    height: 40px;
+  }
+  .arrowImg {
+    width: 30px;
+    height: 30px;
+  }
+  button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 30vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(213, 44, 44, 0.818);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 0;
+    color: black;
+  }
+  footer a {
+    color: black;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer img {
+    width: 30px;
+    height: 30px;
+  }
+  footer a:hover {
+    color: darkgray;
+  }
 }
 
 @media screen and (min-width: 769px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-    }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    #banner {
-        width: 100vw;
-        height: 30vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
-    }
-    #menu {
-        position: absolute;
-        top: 50px;
-        right: 50px;
-        width: 90px;
-        height: auto;
-        cursor: pointer;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    nav {
-        width: 20%;
-        text-align: center;
-    }
-    #dropdownMenu {
-        display: none; 
-        position: absolute;
-        top: 260px; 
-        right: 50px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        
-    }
-    #profileImage {
-        object-fit: cover;
-        margin-top: 20px;
-        width: 370px;
-        height: 270px;
-        border-radius: 20%;
-        cursor: pointer;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);      
-    }
-    #profileImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    h2 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        font-size: 55px;
-    }
-    p {
-        font-size: 35px;
-        margin-top: 5px;
-        text-align: center;
-        width: 80vw;
-    }
-    .image-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content; 
-        margin: 0 auto; 
-    }
-    #mapImage {
-        display: flex;
-        text-align: center;
-        margin-top: 5px;
-        width: 40vw;
-        height: 40vh;
-        border-radius: 10px;
-        border: 2px solid black;
-        cursor: pointer;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
-    }
-    #mapImage:hover {
-        opacity: 0.5;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 60px;
-    }
-    .gallery img {
-        object-fit: cover;
-        border-radius: 10px;
-        width: 30vw;
-        height: 40vh;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    }
-    button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 20vw;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    #buttonOne {
-        margin-right: 14vw;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 75px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 10px 0;
-        color: black;
-    }
-    footer a {
-        color: black;
-        text-decoration: none;
-    }
-    footer img {
-        width: 40px;
-        height: 40px;
-    }
-    footer a:hover {
-        color: darkgray;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer p {
-        margin-bottom: 15px;
-        font-size: 30px;
-        margin-left: 10.5vw;
-    }
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  #banner {
+    width: 100vw;
+    height: 30vh;
+    border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+  }
+  #menu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+  }
+  #menu:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav {
+    width: 20%;
+    text-align: center;
+  }
+  #dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 260px;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 2.5px;
+    overflow: hidden;
+  }
+  #dropdownMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #dropdownMenu ul li {
+    padding: 10px 20px;
+    border-bottom: 1.5px solid #dddddd;
+  }
+  #dropdownMenu ul li:last-child {
+    border-bottom: none;
+  }
+  #dropdownMenu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  #dropdownMenu ul li:hover {
+    background: lightgray;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #profileImage {
+    object-fit: cover;
+    margin-top: 20px;
+    width: 370px;
+    height: 270px;
+    border-radius: 20%;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
+  }
+  #profileImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 55px;
+  }
+  p {
+    font-size: 35px;
+    margin-top: 5px;
+    text-align: center;
+    width: 80vw;
+  }
+  .image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #mapImage {
+    display: flex;
+    text-align: center;
+    margin-top: 5px;
+    width: 40vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+  }
+  #mapImage:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+  #gallery {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  #gallery-image {
+    object-fit: cover;
+    position: center;
+    border-radius: 10px;
+    width: 40vw;
+    height: 30vh;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
+    opacity: 1;
+  }
+  .imgControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    align-items: center;
+
+    height: 40px;
+  }
+  .arrowImg {
+    width: 30px;
+    height: 30px;
+  }
+  button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 20vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(213, 44, 44, 0.818);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  #buttonOne {
+    margin-right: 14vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.683);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 0;
+    color: black;
+  }
+  footer a {
+    color: black;
+    text-decoration: none;
+  }
+  footer img {
+    width: 40px;
+    height: 40px;
+  }
+  footer a:hover {
+    color: darkgray;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer p {
+    margin-bottom: 15px;
+    font-size: 30px;
+    margin-left: 10.5vw;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
