@@ -74,6 +74,9 @@ function cyclePhotos() {
 function loopPhotos() {
   // Implement photo loop functionality
   let currentImage = document.getElementById('gallery-image');
+  if (currentImage === null || undefined) {
+    return;
+  }
 
   if (loopInterval) clearInterval(loopInterval);
   loopInterval = setInterval(cyclePhotos, 6000);
