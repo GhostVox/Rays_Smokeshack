@@ -126,7 +126,7 @@
     object-fit: cover;
     position: center;
     border-radius: 10px;
-    width: 40vw;
+    width: 80vw;
     height: 30vh;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
     opacity: 1;
@@ -313,16 +313,15 @@
   }
   #gallery {
     opacity: 1;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .5s ease-in-out;
   }
 
   #gallery-image {
     object-fit: cover;
     position: center;
     border-radius: 10px;
-
-    width: 40vw;
-    height: 30vh;
+    width: 70vw;
+    height: 50vh;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
     opacity: 1;
   }
@@ -333,7 +332,6 @@
     margin-top: 40px;
     gap: 20px;
     align-items: center;
-
     height: 40px;
   }
   .arrowImg {
@@ -345,7 +343,7 @@
     margin-bottom: 40px;
     width: 30vw;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     background: rgba(213, 44, 44, 0.818);
     color: white;
     border: none;
@@ -511,14 +509,14 @@
   }
   #gallery {
     opacity: 1;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .5s ease-in-out;
   }
   #gallery-image {
     object-fit: cover;
     position: center;
     border-radius: 10px;
-    width: 40vw;
-    height: 30vh;
+    width: 60vw;
+    height: 100vh;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
     opacity: 1;
   }
@@ -529,7 +527,6 @@
     margin-top: 40px;
     gap: 20px;
     align-items: center;
-
     height: 40px;
   }
   .arrowImg {
@@ -541,7 +538,7 @@
     margin-bottom: 40px;
     width: 20vw;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     background: rgba(213, 44, 44, 0.818);
     color: white;
     border: none;
