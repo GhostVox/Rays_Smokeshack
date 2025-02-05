@@ -1,5 +1,5 @@
 const gallery = [
-  { url: 'images/truck.JPG', alt: 'Foodtruck' },
+  { url: 'images/truck.jpeg', alt: 'Foodtruck' },
   { url: 'images/certs.JPG', alt: 'certification' },
   { url: 'images/window.JPG', alt: 'Ace hardware' },
   { url: 'images/tappay.JPG', alt: 'tap to pay' },
@@ -11,7 +11,7 @@ const gallery = [
   { url: 'images/sauce.JPG', alt: 'sauce' },
   { url: 'images/hotsauce.JPG', alt: 'hotsauce' },
   { url: 'images/chips.JPG', alt: 'chips' },
-  { url: 'images/lunchbreak.JPG', alt: 'Lunch break' },
+  { url: 'images/ordering.jpeg', alt: 'ordering' },
   { url: 'images/customer1.JPG', alt: 'customer' },
   { url: 'images/customer2.JPG', alt: 'customer' },
   { url: 'images/customer3.JPG', alt: 'customer' },
