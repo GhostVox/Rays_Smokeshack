@@ -14,27 +14,48 @@
         opacity: 0.7;
         z-index: -1; 
     }
-    #banner {
+    header {
         width: 100vw;
-        height: 13vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+        height: 27vw;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        display: flex;
+        align-items: center;
+    
+    }
+    #logo {
+        width: 90px;
+        height: auto;
+        border-radius: 50%;
+        margin: 20px;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+    }
+    h1 {
+        font-size: 30px;
+        margin-left: 10px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(169, 14, 14, 0.856);
+        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
     }
     #menu {
         position: absolute;
-        top: 20px;
+        top: 30px;
         right: 20px;
-        width: 40px;
+        width: 55px;
         height: auto;
         cursor: pointer;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        border-radius: 20%;
     }
     #menu:hover {
         transform: scale(1.1);
         transition: transform 0.3s ease-in-out;
     }
     #dropdownMenu {
-        display: none; 
+        display: none;
         position: absolute;
-        top: 100px; 
+        top: 110px;
         right: 10px;
         background: rgba(255, 255, 255, 0.683);
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -133,32 +154,52 @@
         opacity: 0.7;
         z-index: -1; 
     }
-    #banner {
+    header {
         width: 100vw;
-        height: 20vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+        height: 17vw;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    #logo {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        margin: 20px;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+    }
+    h1 {
+        font-size: 48px;
+        margin-left: 15%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(169, 14, 14, 0.856);
+        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
     }
     #menu {
         position: absolute;
         top: 30px;
         right: 30px;
-        width: 70px;
+        width: 55px;
         height: auto;
         cursor: pointer;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        border-radius: 20%;
     }
     #menu:hover {
         transform: scale(1.1);
         transition: transform 0.3s ease-in-out;
     }
     nav {
-        width: 30%;
+        width: 20%;
         text-align: center;
     }
     #dropdownMenu {
-        display: none; 
+        display: none;
         position: absolute;
-        top: 150px; 
-        right: 30px;
+        top: 140px;
+        right: 20px;
         background: rgba(255, 255, 255, 0.683);
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         border-radius: 2.5px;
@@ -260,18 +301,39 @@
         opacity: 0.7;
         z-index: -1; 
     }
-    #banner {
+    header {
         width: 100vw;
-        height: 30vh;
-        border-bottom: solid 3px rgba(213, 44, 44, 0.818);
+        height: 12vw;
+        background: rgba(255, 255, 255, 0.683);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        display: flex;
+        align-items: center;
+    
+    }
+    #logo {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin: 20px;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+    }
+    h1 {
+        font-size: 65px;
+        margin-left: 28%;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(169, 14, 14, 0.856);
+        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
     }
     #menu {
         position: absolute;
-        top: 50px;
-        right: 50px;
-        width: 90px;
+        top: 40px;
+        right: 40px;
+        width: 100px;
         height: auto;
         cursor: pointer;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+        border-radius: 20%;
     }
     #menu:hover {
         transform: scale(1.1);
@@ -282,9 +344,9 @@
         text-align: center;
     }
     #dropdownMenu {
-        display: none; 
+        display: none;
         position: absolute;
-        top: 260px; 
+        top: 210px;
         right: 50px;
         background: rgba(255, 255, 255, 0.683);
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
