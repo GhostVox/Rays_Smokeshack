@@ -1,4 +1,4 @@
-/* src/common.css - Complete version with all fixes */
+/* src/common.css - Complete version */
 :root {
   --primary-color: rgba(169, 14, 14, 0.9);
   --primary-color-light: rgba(213, 44, 44, 0.9);
@@ -64,53 +64,64 @@ h1 {
   line-height: 1.1;
 }
 
-/* Navigation Menu - FIXED */
+/* Dropdown menu styles */
 #menu {
   cursor: pointer;
-  z-index: 1000;  /* Higher z-index */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  box-shadow: var(--shadow);
+  border-radius: 15%;
+  transition: var(--transition);
 }
 
 #menu:hover {
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 #dropdownMenu {
   display: none;
   position: absolute;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1000;  /* Higher z-index */
-  width: auto;
-  min-width: 150px;
+  right: 20px;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 200; /* Higher than other elements */
+  border-radius: 4px;
+  overflow: hidden;
 }
-#dropdownMenu[style*="display: block"] {
-  display: block !important;
+
+#dropdownMenu[style*="display: block"] { 
+  display: block !important; 
 }
+
 #dropdownMenu ul {
-  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-#dropdownMenu ul li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+#dropdownMenu li {
+  border-bottom: 1px solid #eee;
 }
 
-#dropdownMenu ul li:last-child {
+#dropdownMenu li:last-child {
   border-bottom: none;
 }
 
-#dropdownMenu ul li a {
+#dropdownMenu a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  color: #333;
   display: block;
-  padding: 12px 20px;
-  transition: var(--transition);
-  font-weight: 500;
+  transition: background-color 0.3s;
 }
 
-#dropdownMenu ul li a:hover {
-  background: rgba(169, 14, 14, 0.1);
-  color: var(--primary-color);
+#dropdownMenu a:hover {
+  background-color: #f1f1f1;
+  color: #a90e0e;
 }
 
 /* Main Content Styles */
@@ -142,7 +153,7 @@ p {
   text-align: center; /* Ensure paragraph text is centered */
 }
 
-/* Gallery Section - FIXED */
+/* Gallery Section */
 .gallerySection {
   display: flex;
   flex-direction: column;
@@ -187,6 +198,7 @@ p {
   align-items: center;
   transition: all 0.3s ease;
   padding: 0;
+  cursor: pointer;
 }
 
 .imgControl:hover {
@@ -262,7 +274,7 @@ footer p {
 
 /* Special Sections */
 .cta-section {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 25px;
   border-radius: var(--border-radius);
@@ -282,6 +294,7 @@ footer p {
   box-shadow: var(--shadow);
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding: 12px 25px;
 }
 
 .cta-button:hover {
@@ -293,6 +306,8 @@ footer p {
 /* Testimonials */
 .testimonials {
   margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
 }
 
 .testimonial-container {
@@ -310,7 +325,7 @@ footer p {
 }
 
 .testimonial:before {
-  content: """;
+  content: "\201C"; /* Unicode for opening double quotation mark */
   font-size: 60px;
   color: rgba(169, 14, 14, 0.2);
   position: absolute;
@@ -322,6 +337,7 @@ footer p {
   font-style: italic;
   position: relative;
   z-index: 2;
+  text-align: left;
 }
 
 .testimonial-name {
@@ -367,18 +383,19 @@ footer p {
   }
   
   #menu {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 15px;
     width: 35px;
     height: 35px;
   }
   
   #dropdownMenu {
-    top: 85px;
+    top: 80px;
     right: 10px;
     width: 150px;
+  }
+  
+  #dropdownMenu a {
+    padding: 10px 15px;
+    font-size: 14px;
   }
   
   section {
@@ -468,10 +485,6 @@ footer p {
   }
   
   #menu {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
     width: 45px;
     height: 45px;
   }
@@ -480,6 +493,11 @@ footer p {
     top: 100px;
     right: 20px;
     width: 180px;
+  }
+  
+  #dropdownMenu a {
+    padding: 12px 18px;
+    font-size: 16px;
   }
   
   section {
@@ -565,10 +583,6 @@ footer p {
   }
   
   #menu {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 30px;
     width: 50px;
     height: 50px;
   }
@@ -579,7 +593,7 @@ footer p {
     width: 200px;
   }
   
-  #dropdownMenu ul li a {
+  #dropdownMenu a {
     padding: 15px 25px;
     font-size: 18px;
   }

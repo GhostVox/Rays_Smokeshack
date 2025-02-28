@@ -1,6 +1,4 @@
-I see the syntax error in the gallery.js file. The issue is with the closing bracket on line 4. Let me provide the corrected gallery.js file, and an additional fix for the dropdown menu:
-1. Fixed gallery.js:
-javascriptCopyconst gallery = [
+const gallery = [
   { url: 'images/truck.jpeg', alt: 'Foodtruck', description: 'Our food truck ready to serve!' },
   { url: 'images/certs.JPG', alt: 'certification', description: 'Fully licensed and certified' },
   { url: 'images/window.JPG', alt: 'Ace hardware', description: 'Our service window where the magic happens' },
@@ -25,24 +23,39 @@ let loopInterval = null;
 let restartTimeout = null;
 
 function setPhoto(imgSrc, imgAlt, description, index) {
-  let currentImage = document.getElementById('gallery-image');
-  let gallery = document.getElementById('gallery');
-  let descriptionEl = document.getElementById('gallery-description');
+  // Get the elements
+  const currentImage = document.getElementById('gallery-image');
+  const gallery = document.getElementById('gallery');
+  const descriptionEl = document.getElementById('gallery-description');
   
-  if (!currentImage || !gallery) return;
+  // Debug log to check what's happening
+  console.log('Setting photo:', imgSrc, index);
   
-  currentImage.src = imgSrc;
-  currentImage.alt = imgAlt;
-  currentImage.dataset.index = index;
+  // Update the image if it exists
+  if (currentImage) {
+    currentImage.src = imgSrc;
+    currentImage.alt = imgAlt || '';
+    currentImage.dataset.index = index;
+    
+    // Force a refresh of the image
+    currentImage.style.opacity = '0.99';
+    setTimeout(() => {
+      currentImage.style.opacity = '1';
+    }, 10);
+  }
   
+  // Update the description if it exists
   if (descriptionEl && description) {
     descriptionEl.textContent = description;
   }
   
-  gallery.classList.add('fadeIn');
-  setTimeout(() => {
-    gallery.classList.remove('fadeIn');
-  }, 500);
+  // Add fadeIn animation
+  if (gallery) {
+    gallery.classList.add('fadeIn');
+    setTimeout(() => {
+      gallery.classList.remove('fadeIn');
+    }, 500);
+  }
 }
 
 function nextPhoto() {
