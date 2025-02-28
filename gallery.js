@@ -1,32 +1,44 @@
-const gallery = [
-  { url: 'images/truck.jpeg', alt: 'Foodtruck' },
-  { url: 'images/certs.JPG', alt: 'certification' },
-  { url: 'images/window.JPG', alt: 'Ace hardware' },
-  { url: 'images/tappay.JPG', alt: 'tap to pay' },
-  { url: 'images/fire.JPG', alt: 'Fire' },
-  { url: 'images/ribs.JPG', alt: 'ribs' },
-  { url: 'images/ribsChicken.jpg', alt: 'Ribs and Chicken' },
-  { url: 'images/pork.jpg', alt: 'pork' },
-  { url: 'images/soda.JPG', alt: 'soda' },
-  { url: 'images/sauce.JPG', alt: 'sauce' },
-  { url: 'images/hotsauce.JPG', alt: 'hotsauce' },
-  { url: 'images/chips.JPG', alt: 'chips' },
-  { url: 'images/ordering.jpeg', alt: 'ordering' },
-  { url: 'images/customer1.JPG', alt: 'customer' },
-  { url: 'images/customer2.JPG', alt: 'customer' },
-  { url: 'images/customer3.JPG', alt: 'customer' },
-  { url: 'images/customer4.JPG', alt: 'customer' },
-  { url: 'images/locationspot.jpeg', alt: 'Ace hardware Location' },
+I see the syntax error in the gallery.js file. The issue is with the closing bracket on line 4. Let me provide the corrected gallery.js file, and an additional fix for the dropdown menu:
+1. Fixed gallery.js:
+javascriptCopyconst gallery = [
+  { url: 'images/truck.jpeg', alt: 'Foodtruck', description: 'Our food truck ready to serve!' },
+  { url: 'images/certs.JPG', alt: 'certification', description: 'Fully licensed and certified' },
+  { url: 'images/window.JPG', alt: 'Ace hardware', description: 'Our service window where the magic happens' },
+  { url: 'images/tappay.JPG', alt: 'tap to pay', description: 'We accept contactless payments' },
+  { url: 'images/fire.JPG', alt: 'Fire', description: 'The perfect fire for smoking meats' },
+  { url: 'images/ribs.JPG', alt: 'ribs', description: 'Our signature fall-off-the-bone ribs' },
+  { url: 'images/ribsChicken.jpg', alt: 'Ribs and Chicken', description: 'Combo plate with ribs and chicken' },
+  { url: 'images/pork.jpg', alt: 'pork', description: 'Slow-smoked pulled pork' },
+  { url: 'images/soda.JPG', alt: 'soda', description: 'Ice cold drinks to complement your meal' },
+  { url: 'images/sauce.JPG', alt: 'sauce', description: 'Our homemade BBQ sauce' },
+  { url: 'images/hotsauce.JPG', alt: 'hotsauce', description: 'Spice up your meal with our hot sauce' },
+  { url: 'images/chips.JPG', alt: 'chips', description: 'Crispy chips - the perfect side' },
+  { url: 'images/ordering.jpeg', alt: 'ordering', description: 'Happy customers ordering their BBQ' },
+  { url: 'images/customer1.JPG', alt: 'customer', description: 'Enjoying Ray\'s BBQ' },
+  { url: 'images/customer2.JPG', alt: 'customer', description: 'Another satisfied customer' },
+  { url: 'images/customer3.JPG', alt: 'customer', description: 'Our BBQ makes people smile' },
+  { url: 'images/customer4.JPG', alt: 'customer', description: 'Creating happy memories with great food' },
+  { url: 'images/locationspot.jpeg', alt: 'Ace hardware Location', description: 'Find us at Ace Hardware in Cartersville' },
 ];
+
 let loopInterval = null;
 let restartTimeout = null;
 
-function setPhoto(imgSrc, imgAlt, index) {
+function setPhoto(imgSrc, imgAlt, description, index) {
   let currentImage = document.getElementById('gallery-image');
   let gallery = document.getElementById('gallery');
+  let descriptionEl = document.getElementById('gallery-description');
+  
+  if (!currentImage || !gallery) return;
+  
   currentImage.src = imgSrc;
   currentImage.alt = imgAlt;
   currentImage.dataset.index = index;
+  
+  if (descriptionEl && description) {
+    descriptionEl.textContent = description;
+  }
+  
   gallery.classList.add('fadeIn');
   setTimeout(() => {
     gallery.classList.remove('fadeIn');
@@ -34,47 +46,55 @@ function setPhoto(imgSrc, imgAlt, index) {
 }
 
 function nextPhoto() {
-  // Implement forward button functionality
   console.log('forward button clicked');
   stopLoop();
   let currentImage = document.getElementById('gallery-image');
+  if (!currentImage) return;
+  
   let currentIndex = parseInt(currentImage.dataset.index);
   let nextIndex = (currentIndex + 1) % gallery.length;
-  console.log(currentIndex);
-  setPhoto(gallery[nextIndex].url, gallery[nextIndex].alt, nextIndex);
-  console.log(currentImage.src);
+  
+  setPhoto(gallery[nextIndex].url, gallery[nextIndex].alt, gallery[nextIndex].description, nextIndex);
+  
   restartLoopAfterDelay();
 }
 
 function previousPhoto() {
   console.log('back button clicked');
-  // Implement back button functionality
   stopLoop();
   let currentImage = document.getElementById('gallery-image');
+  if (!currentImage) return;
+  
   let currentIndex = parseInt(currentImage.dataset.index);
   let previousIndex = (currentIndex - 1 + gallery.length) % gallery.length;
 
   setPhoto(
     gallery[previousIndex].url,
     gallery[previousIndex].alt,
+    gallery[previousIndex].description,
     previousIndex
   );
   restartLoopAfterDelay();
 }
 
 function cyclePhotos() {
-  // Implement photo cycling functionality
   let currentImage = document.getElementById('gallery-image');
-  let currentIndex = parseInt(currentImage.dataset.index);
+  if (!currentImage) return;
+  
+  let currentIndex = parseInt(currentImage.dataset.index || 0);
   let nextIndex = (currentIndex + 1) % gallery.length;
 
-  setPhoto(gallery[nextIndex].url, gallery[nextIndex].alt, nextIndex);
+  setPhoto(
+    gallery[nextIndex].url, 
+    gallery[nextIndex].alt,
+    gallery[nextIndex].description,
+    nextIndex
+  );
 }
 
 function loopPhotos() {
-  // Implement photo loop functionality
   let currentImage = document.getElementById('gallery-image');
-  if (currentImage === null || undefined) {
+  if (currentImage === null || currentImage === undefined) {
     return;
   }
 
@@ -83,7 +103,6 @@ function loopPhotos() {
 }
 
 function stopLoop() {
-  // Implement stopping the photo loop
   clearInterval(loopInterval);
   loopInterval = null;
 }
@@ -93,4 +112,24 @@ function restartLoopAfterDelay() {
   restartTimeout = setTimeout(loopPhotos, 10000);
 }
 
-export { nextPhoto, previousPhoto, loopPhotos };
+function initGallery() {
+  const galleryElement = document.getElementById('gallery');
+  if (!galleryElement) return;
+  
+  // Create description element if it doesn't exist
+  const descriptionEl = document.getElementById('gallery-description');
+  if (!descriptionEl) {
+    const newDescriptionEl = document.createElement('p');
+    newDescriptionEl.id = 'gallery-description';
+    newDescriptionEl.className = 'gallery-description';
+    galleryElement.appendChild(newDescriptionEl);
+  }
+  
+  // Initialize with first image
+  const currentImage = document.getElementById('gallery-image');
+  if (currentImage) {
+    setPhoto(gallery[0].url, gallery[0].alt, gallery[0].description, 0);
+  }
+}
+
+export { nextPhoto, previousPhoto, loopPhotos, initGallery };

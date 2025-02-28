@@ -1,501 +1,219 @@
-@media screen and (max-width: 430px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
+/* src/contact.css - Contact page specific styles */
+body {
+    color: #333;
+  }
+  
+  main {
+    width: 100%;
+  }
+  
+  /* Section Headings */
+  section h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #222;
+  }
+  
+  section > p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Information Card */
+  .contact-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 25px 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .contact-info strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #a90e0e;
+    font-size: 18px;
+  }
+  
+  .contact-info strong i {
+    margin-right: 8px;
+  }
+  
+  .contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #a90e0e;
+  }
+  
+  #facebookIcon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  #facebookIcon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Button Section */
+  .button-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0 50px;
+  }
+  
+  button {
+    background: rgba(213, 44, 44, 0.821);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+  
+  button:hover {
+    background: #a90e0e;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Phone (up to 430px) */
+  @media screen and (max-width: 430px) {
+    section h2 {
+      font-size: 24px;
+      margin: 15px 0;
     }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    header {
-        width: 100vw;
-        height: 27vw;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        display: flex;
-        align-items: center;
     
-    }
-    #logo {
-        width: 80px;
-        height: auto;
-        border-radius: 50%;
-        margin: 20px;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    }
-    h1 {
-        font-size: 30px;
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: rgba(169, 14, 14, 0.856);
-        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-    }
-    #menu {
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        width: 45px;
-        height: auto;
-        cursor: pointer;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        border-radius: 20%;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    #dropdownMenu {
-        display: none;
-        position: absolute;
-        top: 110px;
-        right: 10px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        
-    }
-    h2 {
-        font-size: 35px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
     .contact-info {
-        border: 2px black solid;
-        border-radius: 10px;
-        background-color: #dddddd8e;
-        width: 90%;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5%;
+      padding: 20px 15px;
     }
-    #facebookIcon {
-        margin-bottom: 10px;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    #facebookIcon:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .contact-info a {
-        color: black;
-        text-decoration: none;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: 18px;
-        margin-top: 5px;
-        text-align: center;
-    }
-    button {
-        margin-top: 40px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 50px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 20px 0;
-        color: black;
-    }
-}
-
-@media screen and (min-width: 431px) and (max-width: 768px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-    }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    header {
-        width: 100vw;
-        height: 17vw;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-    #logo {
-        width: 100px;
-        height: auto;
-        border-radius: 50%;
-        margin: 20px;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    }
-    h1 {
-        font-size: 48px;
-        margin-left: 15%;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: rgba(169, 14, 14, 0.856);
-        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-    }
-    #menu {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        width: 55px;
-        height: auto;
-        cursor: pointer;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        border-radius: 20%;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    nav {
-        width: 20%;
-        text-align: center;
-    }
-    #dropdownMenu {
-        display: none;
-        position: absolute;
-        top: 140px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        
-    }
-    h2 {
-        font-size: 45px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .contact-info {
-        border: 2px black solid;
-        border-radius: 10px;
-        background-color: #dddddd8e;
-        width: 90%;
-        height: 45vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 3%;
-    }
-    #facebookIcon {
-        margin-bottom: 10px;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    #facebookIcon:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .contact-info a {
-        color: black;
-        text-decoration: none;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: 25px;
-        margin-top: 5px;
-        text-align: center;
-    }
-    button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 30vw;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    footer {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 10px 0;
-        color: black;
-    }
-    footer a {
-        color: black;
-        text-decoration: none;
-    }
-    footer img {
-        width: 30px;
-        height: 30px;
-    }
-    footer a:hover {
-        color: darkgray;
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-    }
-    .bg-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-        opacity: 0.7;
-        z-index: -1; 
-    }
-    header {
-        width: 100vw;
-        height: 12vw;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        display: flex;
-        align-items: center;
     
+    .contact-info strong {
+      font-size: 16px;
     }
-    #logo {
-        width: 150px;
-        height: auto;
-        border-radius: 50%;
-        margin: 20px;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
+    
+    .contact-info p {
+      font-size: 14px;
+      margin-bottom: 15px;
     }
-    h1 {
-        font-size: 65px;
-        margin-left: 28%;
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: rgba(169, 14, 14, 0.856);
-        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-    }
-    #menu {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        width: 100px;
-        height: auto;
-        cursor: pointer;
-        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-        border-radius: 20%;
-    }
-    #menu:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    nav {
-        width: 20%;
-        text-align: center;
-    }
-    #dropdownMenu {
-        display: none;
-        position: absolute;
-        top: 210px;
-        right: 50px;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 2.5px;
-        overflow: hidden;
-    }
-    #dropdownMenu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #dropdownMenu ul li {
-        padding: 10px 20px;
-        border-bottom: 1.5px solid #dddddd;
-    }
-    #dropdownMenu ul li:last-child {
-        border-bottom: none;
-    }
-    #dropdownMenu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
-    #dropdownMenu ul li:hover {
-        background: lightgray;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;      
-    }
-    h2 {
-        font-size: 45px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .contact-info {
-        border: 2px black solid;
-        border-radius: 10px;
-        background-color: #dddddd8e;
-        width: 80%;
-        height: 45vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10%;
-    }
-    #facebookIcon {
-        margin-bottom: 10px;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    #facebookIcon:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .contact-info a {
-        color: black;
-        text-decoration: none;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: 25px;
-        margin-top: 5px;
-        text-align: center;
-        width: 80vw;
-    }
+    
     button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        width: 20vw;
-        padding: 10px 20px;
-        border-radius: 5px;
-        background: rgba(213, 44, 44, 0.818);
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
+      padding: 10px 20px;
+      font-size: 14px;
+      min-width: 100px;
     }
-    button:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
+    
+    .button-section {
+      margin: 20px 0 40px;
     }
-    #buttonOne {
-        margin-right: 14vw;
+    
+    #facebookIcon {
+      width: 30px;
+      height: 30px;
     }
-    footer {
-        display: flex;
-        flex-direction: column;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background: rgba(255, 255, 255, 0.683);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding: 10px 0;
-        color: black;
+  }
+  
+  /* Tablet (431px to 768px) */
+  @media screen and (min-width: 431px) and (max-width: 768px) {
+    section h2 {
+      font-size: 28px;
+      margin: 18px 0;
     }
-    footer p {
-        margin-bottom: 15px;
-        font-size: 30px;
-        margin-left: 10.5vw;
+    
+    .contact-info {
+      padding: 22px 18px;
     }
-}
+    
+    .contact-info strong {
+      font-size: 17px;
+    }
+    
+    .contact-info p {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    
+    button {
+      padding: 12px 22px;
+      font-size: 15px;
+      min-width: 110px;
+    }
+    
+    .button-section {
+      margin: 25px 0 45px;
+    }
+    
+    #facebookIcon {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  /* Desktop (769px and above) */
+  @media screen and (min-width: 769px) {
+    section h2 {
+      font-size: 32px;
+      margin: 25px 0;
+    }
+    
+    .contact-info {
+      padding: 30px 25px;
+    }
+    
+    .contact-info strong {
+      font-size: 20px;
+    }
+    
+    .contact-info p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      min-width: 130px;
+    }
+    
+    .button-section {
+      margin: 35px 0 60px;
+    }
+    
+    #facebookIcon {
+      width: 40px;
+      height: 40px;
+    }
+  }

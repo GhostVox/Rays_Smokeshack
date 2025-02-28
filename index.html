@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Rays Smokeshack</title>
+    <link rel="stylesheet" href="src/common.css"/>
     <link rel="stylesheet" href="src/index.css"/>
     <script src="index.js" type="module" defer></script>
   </head>
   <body id="1">
     <div class="bg-image"></div>
-
 
     <header>
       <img src="images/logo1.svg" alt="logo" id="logo"/>
@@ -24,8 +24,6 @@
       </nav>
     </header>
 
-
-
     <main>
       <section>
         <a href="https://www.facebook.com/profile.php?id=61571556299024" tabindex="5" target="_blank"><img src="images/newprofile.JPG" alt="Ray and Wife" id="profileImage"/></a>
@@ -34,14 +32,24 @@
       <section>
         <h2>About Ray</h2>
         <p>
-          <cite>Ray’s Smokeshack</cite><br>
+          <cite>Ray's Smokeshack</cite><br>
 
-Ray’s Smokeshack is more than just a place to grab great barbecue—it’s a dream brought to life. Founded by a dedicated veteran, motorcycle enthusiast, and family man, Ray always had a passion for good food and bringing people together. With a vision of owning his own food truck, he turned that dream into reality, creating a smokeshack where every meal is crafted with care and served with heart.
+Ray's Smokeshack is more than just a place to grab great barbecue—it's a dream brought to life. Founded by a dedicated veteran, motorcycle enthusiast, and family man, Ray always had a passion for good food and bringing people together. With a vision of owning his own food truck, he turned that dream into reality, creating a smokeshack where every meal is crafted with care and served with heart.
 
-Located in the heart of the city, Ray’s Smokeshack is a family-owned and operated business committed to delivering an exceptional dining experience. Whether you're stopping by for a quick bite or settling in to enjoy the warm, welcoming atmosphere, you’ll taste the dedication in every bite.
+Located in the heart of the city, Ray's Smokeshack is a family-owned and operated business committed to delivering an exceptional dining experience. Whether you're stopping by for a quick bite or settling in to enjoy the warm, welcoming atmosphere, you'll taste the dedication in every bite.
 
-Come hungry, leave happy—because at Ray’s, we’re all family.
+Come hungry, leave happy—because at Ray's, we're all family.
         </p>
+      </section>
+
+      <section class="cta-section">
+        <h2>Ready to try our BBQ?</h2>
+        <p>Visit us this weekend at Ace Hardware in Cartersville!</p>
+        <a href="https://www.google.com/maps?q=34.15458842427611, -84.81957458282288" 
+           target="_blank" 
+           class="cta-button">
+          Get Directions
+        </a>
       </section>
 
       <section>
@@ -54,7 +62,8 @@ Come hungry, leave happy—because at Ray’s, we’re all family.
       <section class="gallerySection">
         <h2>Gallery</h2>
         <div id="gallery">
-          <img id="gallery-image" src="./images/truck.jpeg" alt="Foodtruck" data-index="1"/>
+          <img id="gallery-image" src="./images/truck.jpeg" alt="Foodtruck" data-index="0"/>
+          <!-- gallery-description will be added by JavaScript -->
         </div>
         <div class="imgControls">
           <button id="backButton" class="imgControl"><img src="./images/arrow-left.svg" alt="previous image arrow left" class="arrowImg"/></button>
@@ -62,8 +71,22 @@ Come hungry, leave happy—because at Ray’s, we’re all family.
         </div>
       </section>
 
-      <section>
-        <a href="contact.html"tabindex="7"><button id="buttonOne">Contact</button></a>
+      <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p>"Best BBQ in town! The ribs just fall off the bone and the sauce is incredible."</p>
+            <p class="testimonial-name">- Mike S.</p>
+          </div>
+          <div class="testimonial">
+            <p>"Ray's Smokeshack has the most authentic BBQ I've tasted in Georgia. Don't miss the pulled pork!"</p>
+            <p class="testimonial-name">- Sarah T.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="button-section">
+        <a href="contact.html" tabindex="7"><button>Contact</button></a>
         <a href="menu.html" tabindex="8"><button>Menu</button></a>
       </section>
 

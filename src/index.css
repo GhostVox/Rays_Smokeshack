@@ -1,658 +1,242 @@
+/* src/index.css - Home page specific styles */
+
+/* Core Styles */
+body {
+  color: #333;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+}
+
+/* Profile Image */
+#profileImage {
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid white;
+}
+
+#profileImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Location Map */
+.image-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+#mapImage {
+  border-radius: 10px;
+  border: 3px solid rgba(169, 14, 14, 0.9) !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+#mapImage:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Gallery Section */
+.gallerySection {
+  margin: 30px auto;
+}
+
+#gallery {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+#gallery-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.imgControls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.imgControl {
+  background: rgba(0, 0, 0, 0.567);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.imgControl:hover {
+  background: rgba(169, 14, 14, 0.9);
+  transform: scale(1.1);
+}
+
+.arrowImg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Button Section */
+section:has(button) {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#buttonOne {
+  margin-right: 0;
+}
+
+/* Phone (up to 430px) */
 @media screen and (max-width: 430px) {
-  body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-  }
-  .bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-    opacity: 0.7;
-    z-index: -1;
-  }
-  header {
-    width: 100vw;
-    height: 27vw;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    display: flex;
-    align-items: center;
-
-  }
-  #logo {
-    width: 80px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-  }
-  h1 {
-    font-size: 30px;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgba(169, 14, 14, 0.856);
-    text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-  }
-  #menu {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 45px;
-    height: auto;
-    cursor: pointer;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    border-radius: 20%;
-  }
-  #menu:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  #dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 110px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 2.5px;
-    overflow: hidden;
-  }
-  #dropdownMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #dropdownMenu ul li {
-    padding: 10px 20px;
-    border-bottom: 1.5px solid #dddddd;
-  }
-  #dropdownMenu ul li:last-child {
-    border-bottom: none;
-  }
-  #dropdownMenu ul li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-  }
-  #dropdownMenu ul li:hover {
-    background: lightgray;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
   #profileImage {
-    object-fit: cover;
-    margin-top: 20px;
-    width: 220px;
+    width: 200px;
     height: 150px;
-    border-radius: 20%;
-    cursor: pointer;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
+    margin-top: 15px;
   }
-  #profileImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-  p {
-    font-size: 18px;
-    margin-top: 5px;
-    text-align: center;
-  }
-  .image-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-  }
+  
   #mapImage {
-    object-fit: cover;
-    margin-top: 20px;
-    width: 300px;
-    height: 260px;
-    border-radius: 10px;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
+    width: 280px;
+    height: 220px;
+    margin-top: 15px;
   }
-  #mapImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  /* Gallery css */
-
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-  }
-
+  
   #gallery-image {
-    object-fit: cover;
-    position: center;
-    border-radius: 10px;
-    width: 80vw;
-    height: 30vh;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    opacity: 1;
+    height: 200px;
   }
-  .imgControls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
-    align-items: center;
-    height: 40px;
-    img {
-      width: 20px;
-      height: 20px;
-    }
+  
+  .imgControl {
+    width: 36px;
+    height: 36px;
   }
-  /* End of Gallery css */
-
-  button {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: rgba(213, 44, 44, 0.818);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+  
+  .arrowImg {
+    width: 16px;
+    height: 16px;
   }
-  button:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+  
+  section:has(h2) {
+    margin-top: 20px;
   }
-  footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 54px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 10px 0;
-    color: black;
+  
+  section:has(button) {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-  footer a {
-    color: black;
-    text-decoration: none;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  footer a:hover {
-    color: darkgray;
+  
+  section p {
+    padding: 0 5px;
   }
 }
 
+/* Tablet (431px to 768px) */
 @media screen and (min-width: 431px) and (max-width: 768px) {
-  body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-  }
-  .bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-    opacity: 0.7;
-    z-index: -1;
-  }
-  header {
-    width: 100vw;
-    height: 17vw;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  #logo {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-  }
-  h1 {
-    font-size: 48px;
-    margin-left: 15%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgba(169, 14, 14, 0.856);
-    text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-  }
-  #menu {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 55px;
-    height: auto;
-    cursor: pointer;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    border-radius: 20%;
-  }
-  #menu:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  nav {
-    width: 20%;
-    text-align: center;
-  }
-  #dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 140px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 2.5px;
-    overflow: hidden;
-  }
-  #dropdownMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #dropdownMenu ul li {
-    padding: 10px 20px;
-    border-bottom: 1.5px solid #dddddd;
-  }
-  #dropdownMenu ul li:last-child {
-    border-bottom: none;
-  }
-  #dropdownMenu ul li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-  }
-  #dropdownMenu ul li:hover {
-    background: lightgray;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
   #profileImage {
-    object-fit: cover;
+    width: 300px;
+    height: 200px;
     margin-top: 20px;
-    width: 350px;
-    height: 250px;
-    border-radius: 20%;
-    cursor: pointer;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
   }
-  #profileImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 35px;
-  }
-  p {
-    font-size: 25px;
-    margin-top: 5px;
-    text-align: center;
-  }
-  .image-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-  }
+  
   #mapImage {
+    width: 400px;
+    height: 300px;
     margin-top: 20px;
-    width: 55vw;
-    height: 35vh;
-    border-radius: 10px;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
   }
-  #mapImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  .gallerySection {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #gallery {
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
-  }
-
+  
   #gallery-image {
-    object-fit: cover;
-    position: center;
-    border-radius: 10px;
-    width: 70vw;
-    height: 50vh;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    opacity: 1;
+    height: 320px;
   }
-  .imgControls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
-    align-items: center;
-    height: 40px;
-  }
-  .arrowImg {
-    width: 30px;
-    height: 30px;
-  }
-  button {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 30vw;
-    padding: 10px 20px;
-    border-radius: 15px;
-    background: rgba(213, 44, 44, 0.818);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-  }
-  button:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 10px 0;
-    color: black;
-  }
-  footer a {
-    color: black;
-    text-decoration: none;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  footer img {
-    width: 30px;
-    height: 30px;
-  }
-  footer a:hover {
-    color: darkgray;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  body {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-  }
-  .bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../images/smoke.jpg') center/cover no-repeat fixed;
-    opacity: 0.7;
-    z-index: -1;
-  }
-  header {
-    width: 100vw;
-    height: 12vw;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    display: flex;
-    align-items: center;
-
-  }
-  #logo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-  }
-  h1 {
-    font-size: 65px;
-    margin-left: 28%;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgba(169, 14, 14, 0.856);
-    text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.685);
-  }
-  #menu {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.724);
-    border-radius: 20%;
-  }
-  #menu:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  nav {
-    width: 20%;
-    text-align: center;
-  }
-  #dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 210px;
-    right: 50px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 2.5px;
-    overflow: hidden;
-  }
-  #dropdownMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #dropdownMenu ul li {
-    padding: 10px 20px;
-    border-bottom: 1.5px solid #dddddd;
-  }
-  #dropdownMenu ul li:last-child {
-    border-bottom: none;
-  }
-  #dropdownMenu ul li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-  }
-  #dropdownMenu ul li:hover {
-    background: lightgray;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  #profileImage {
-    object-fit: cover;
-    margin-top: 20px;
-    width: 370px;
-    height: 270px;
-    border-radius: 20%;
-    cursor: pointer;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.939);
-  }
-  #profileImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 55px;
-  }
-  p {
-    font-size: 35px;
-    margin-top: 5px;
-    text-align: center;
-    width: 80vw;
-  }
-  .image-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-  }
-  #mapImage {
-    display: flex;
-    text-align: center;
-    margin-top: 5px;
-    width: 40vw;
-    height: 40vh;
-    border-radius: 10px;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.947);
-  }
-  #mapImage:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
-  }
-  #gallery {
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
-  }
-  #gallery-image {
-    object-fit: cover;
-    position: center;
-    border-radius: 10px;
-    width: 60vw;
-    height: 100vh;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.917);
-    opacity: 1;
-  }
-  .imgControls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
-    align-items: center;
-    height: 40px;
-  }
-  .arrowImg {
-    width: 30px;
-    height: 30px;
-  }
-  button {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 20vw;
-    padding: 10px 20px;
-    border-radius: 15px;
-    background: rgba(213, 44, 44, 0.818);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-  }
-  button:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  #buttonOne {
-    margin-right: 14vw;
-  }
-  footer {
-    display: flex;
-    flex-direction: column;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    background: rgba(255, 255, 255, 0.683);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 10px 0;
-    color: black;
-  }
-  footer a {
-    color: black;
-    text-decoration: none;
-  }
-  footer img {
+  
+  .imgControl {
     width: 40px;
     height: 40px;
   }
-  footer a:hover {
-    color: darkgray;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+  
+  .arrowImg {
+    width: 18px;
+    height: 18px;
   }
-  footer p {
-    margin-bottom: 15px;
-    font-size: 30px;
-    margin-left: 10.5vw;
+  
+  section:has(h2) {
+    margin-top: 25px;
+  }
+  
+  section:has(button) {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  section p {
+    padding: 0 10px;
   }
 }
 
-.fadeIn {
-  animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+/* Desktop (769px and above) */
+@media screen and (min-width: 769px) {
+  #profileImage {
+    width: 400px;
+    height: 250px;
+    margin-top: 30px;
   }
-  100% {
-    opacity: 1;
+  
+  #mapImage {
+    width: 600px;
+    height: 400px;
+    margin-top: 25px;
+  }
+  
+  #gallery-image {
+    height: 450px;
+  }
+  
+  .imgControl {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .arrowImg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  section:has(h2) {
+    margin-top: 30px;
+  }
+  
+  section:has(button) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  #buttonOne {
+    margin-right: 30px;
+  }
+  
+  section p {
+    padding: 0 20px;
+    max-width: 900px;
+    margin: 0 auto 15px;
   }
 }
